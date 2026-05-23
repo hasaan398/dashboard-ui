@@ -1,0 +1,38 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.sidebar{
+    position: fixed;
+    margin-left: -25px;
+    padding: 20px;
+    width: 150px;
+    height: 100%;
+    margin-top : -25px;
+    position: fixed;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 100px;
+    margin-left: 5px;
+}
+.card{
+   
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.068);
+    border: 1px solid #ddd;
+}
+.vector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    gap: 5px;
+}
