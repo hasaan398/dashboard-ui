@@ -4,6 +4,7 @@ import chat from "../assets/chat.png";
 import user from "../assets/user.png";
 import "./header.css";
 import search from "../assets/search.png";
+import drop from "../assets/drop.png";
 
 function Header() {
   return (
@@ -34,6 +35,7 @@ function Header() {
         <div className="language">
 
           <span>English (US)</span>
+          <img src={drop} alt="dropdown" />
 
          
 

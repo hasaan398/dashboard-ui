@@ -1,5 +1,8 @@
-import React from 'react'
-import './sidebar.css'
+import React from "react";
+import { Link } from "react-router-dom";
+
+import "./sidebar.css";
+
 import logo from "../assets/logo.png";
 import email from "../assets/email.png";
 import contact from "../assets/contact.png";
@@ -10,55 +13,60 @@ import dolar from "../assets/dolar.png";
 import pye from "../assets/pye.png";
 import home from "../assets/home.png";
 
-
 function Sidebar() {
   return (
-    
-
     <div className="sidebar">
-
       <div className="card">
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
 
+        <div className="vector">
 
-<div className="vector">
-<div>
-  <img src={home} alt="vector" />
-</div>
+          
+          <Link to="/">
+            <img src={home} alt="home" />
+          </Link>
 
-<div>
-  <img src ={email} alt="email" />
-</div>
+          
+          <Link to="/email">
+            <img src={email} alt="email" />
+          </Link>
 
-<div>
-  <img src={contact} alt="contact" />
-</div>
+          
+          <Link to="/contact">
+            <img src={contact} alt="contact" />
+          </Link>
 
-<div >
-  <img src={crypto} alt="crypto" />
-</div>
+          
+          <Link to="/crypto">
+            <img src={crypto} alt="crypto" />
+          </Link>
+        
+          <Link to="/kanban">
+            <img src={kanban} alt="kanban" />
+          </Link>
 
-<div>
-  <img src={kanban} alt="kanban" />
-</div>
+      
+          <Link to="/invoicing">
+            <img src={invoicing} alt="invoice" />
+          </Link>
 
-<div >
-  <img src={invoicing} alt="invoice" />
-</div>
+          
+          <Link to="/finance">
+            <img src={dolar} alt="dollar" />
+          </Link>
 
-<div>
-  <img src={dolar} alt="vecto-1" />
-</div>
- 
- <div className="vector-2"> 
-  <img src={pye} alt="vector-2" />
- </div>
- </div>
+
+          <div className="vector-2">
+            <Link to="/analytics">
+              <img src={pye} alt="pie" />
+            </Link>
+          </div>
+
+        </div>
       </div>
     </div>
-  
   );
 }
 
