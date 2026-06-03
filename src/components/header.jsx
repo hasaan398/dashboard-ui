@@ -45,10 +45,13 @@ function Header() {
         {/* Icons */}
         <div className="icon">
           <img src={chat} alt="chat" />
+          <span>2</span>
+    
         </div>
 
         <div className="icon">
           <img src={notification} alt="notification" />
+          <span>2</span>
         </div>
 
 

@@ -1,46 +1,122 @@
-.dashboard-card{
-    width: 300px;
-    height: 90px;
 
-    background: white;
-    border: 1px solid #eeeeee;
-    border-radius: 14px;
-    display: flex;
-    padding: 18px;
-    margin-left: 0;
-    justify-content: space-between;
-    align-items: center;
+
+.dashboard-card{
+    width:230px;
+    height:70px;
+    border:1px solid #ececec;
+    border-radius:16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top: 20px;
+    padding:18px;
+
 }
 
 .dashboard-card-left{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
 
 .dashboard-card-icon{
-
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .dashboard-card-icon img{
-    width:25px;
-    height:auto;
-    font-size: 14px;
-    display:block;
+    width:20px;
 }
 
 .dashboard-card span{
+    color:#777;
     font-size:14px;
-    color:gray;
 }
 
 .dashboard-card h4{
     margin:0;
-    font-size:20px;
-    font-weight:600;
+    font-size:16px;
+    font-weight: 700;
+}
+
+
+.main-card .card{
+
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    width:275px;
+    height: 160px;
+    display:flex;
+    flex-direction:column;
+    margin-left: 20px;
+
+}
+.main-card{
+    margin-top: 20px;
+}
+.main-card img{
+    width:250px;
+    margin-top:20px;
+  
+}
+
+.card-top {
+   display:flex;
+   gap: 5px;
+   justify-content:space-between;
+   align-items:center;
+   font-weight: 900;
+}
+.card-top h3{
+       font-size: 16px;
+       font-weight: 700;
+
+}
+.card-top h2{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.details img{
+    width:62%;
+    border-radius:20px;
+    margin-left: 150px;
+    margin-top: 20px;
+    border: 1px solid #ececec;
+}
+
+.tag img{
+    width: 600px;
+    height: 300px;
+    margin-left: -50px;
+    border: none;
+}
+
+.right{
+   position: absolute;
+   top: 105px;
+   right: 0px;
+   padding: 10px;
+   width: 300px;
+   height: 100vh;
+   font-weight: 900;
+   font-size: 16px;
+   background-color: #F5EFFC;
+   
+}
+.right h2{
+    padding: 10px;
+    font-weight: 900;
+   font-size: 16px;
+}
+.right img{
+    margin-top: 5px;
+    width: 200px;
+    height:fit-content;
+    margin-left: 15px;
 }

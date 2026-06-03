@@ -7,50 +7,57 @@ import emailpage from "./assets/emailpage.png";
 import mailpage from "./assets/mailpage.png";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import content from "./assets/content.png";
-import rightcontent from "./assets/rightcontent.png";
-import Card1, { Card } from "./components/card-1";
+import Card1, { Card, Card2 , Card3 } from "./components/card-1";
 import bag from "./assets/bag.png";
 import invest from "./assets/invest.png";
 import asset from "./assets/asset.png";
 import sideproject from "./assets/sideproject.png";
-
+import "./components/card-1.css";
 
 function Dashboard() {
   return (
-    <>
+    <div className="dashboard-layout">
 
-        <div className="main-content">
+      <div className="dashboard-left">
 
-          <div className="content">
+        <h1 className="dashboard-title">Dashboard</h1>
 
-            <h1>Dashboard</h1>
+<div className="row">
 
-            <div className="cards-container">
+   <div className="col-5">
 
-              <Card1 icon={bag} title="Project" value="127" />
-
-              <Card1 icon={invest} title="Investment" value="932" />
-
-              <Card1 icon={asset} title="Assets" value="845" />
-
-              <Card1 icon={sideproject} title="Users" value="456" />
-
-            </div>
-
-          </div>
-{/* 
-          <div className="side-card">
-            <Card />
-
-          </div> */}
-
-          <div className="right-side">
-            <img src={rightcontent} alt="content" />
-          </div>
-
+      <div className="row">
+        <div className="col-md-6">
+          <Card1 icon={bag} title="Project" value="127" />
         </div>
 
-    </>
+        <div className="col-md-6">
+          <Card1 icon={invest} title="Investment" value="932" />
+        </div>
+
+        <div className="col-md-6">
+          <Card1 icon={asset} title="Assets" value="845" />
+        </div>
+
+        <div className="col-md-6">
+          <Card1 icon={sideproject} title="Users" value="456" />
+        </div>
+      </div>
+
+   </div>
+
+   <div className="col-4">
+                              <Card />
+   </div>
+
+</div>
+      </div>
+                              <Card2 />
+      {/* <div className="dashboard-right"> */}
+                               <Card3/>
+      {/* </div> */}
+
+    </div>
   );
 }
 
@@ -123,7 +130,6 @@ function App() {
     
         <div className="main-area">
               <Header />
-              <Card1></Card1>
 
           <Routes>
             <Route path="/" element={<Dashboard />} />
