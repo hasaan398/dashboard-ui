@@ -22,16 +22,16 @@ function Dashboard() {
 
         <h1 className="dashboard-title">Dashboard</h1>
 
-<div className="row">
+<div className="row  gx-3 ">
 
    <div className="col-5">
 
-      <div className="row">
+      <div className="row ">
         <div className="col-md-6">
           <Card1 icon={bag} title="Project" value="127" />
         </div>
 
-        <div className="col-md-6">
+        <div className="col-md-6 ">
           <Card1 icon={invest} title="Investment" value="932" />
         </div>
 
@@ -39,7 +39,7 @@ function Dashboard() {
           <Card1 icon={asset} title="Assets" value="845" />
         </div>
 
-        <div className="col-md-6">
+        <div className="col-md-6 ">
           <Card1 icon={sideproject} title="Users" value="456" />
         </div>
       </div>
