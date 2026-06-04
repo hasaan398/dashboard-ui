@@ -219,4 +219,36 @@
 
 /* -------------------media queries-------------------- */
 
+@media (max-width: 1250px) {
+    .dashboard-card{
+        display: flex;
+    }
+}
 
+@media (max-width: 1100px) {
+  .details img{
+    width:40%;
+  }
+  .tag{
+    width: 70%;
+    height: 60%;
+    margin-left: 200px;
+     transform: scale(0.8);
+     margin-bottom: -50px;
+  }
+  .main-card .card{
+    width: 200px;
+    font-size: 12px;
+  }
+  .main-card img{
+    width: 150px;
+  }
+  .main-card .card h3 h2{
+    font-size: 1px;
+  }
+  .right {
+    top: auto;
+    bottom: 0;
+    
+  }
+}

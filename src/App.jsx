@@ -27,26 +27,26 @@ function Dashboard() {
    <div className="col-5">
 
       <div className="row ">
-        <div className="col-md-6">
+        <div className="col-xl-6">
           <Card1 icon={bag} title="Project" value="127" />
         </div>
 
-        <div className="col-md-6 ">
+        <div className="col-xl-6 ">
           <Card1 icon={invest} title="Investment" value="932" />
         </div>
 
-        <div className="col-md-6">
+        <div className="col-xl-6">
           <Card1 icon={asset} title="Assets" value="845" />
         </div>
 
-        <div className="col-md-6 ">
+        <div className="col-xl-6 ">
           <Card1 icon={sideproject} title="Users" value="456" />
         </div>
       </div>
 
    </div>
 
-   <div className="col-4">
+   <div className="col-xl-4">
                               <Card />
    </div>
 

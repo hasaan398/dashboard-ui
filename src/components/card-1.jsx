@@ -56,7 +56,7 @@ function Card1({ icon, title, value }) {
 
 export function Card2() {
   return (
-    <div className="details">
+    <div className="details ">
 
       <img src={detail} alt="detail" />
 
@@ -66,11 +66,11 @@ export function Card2() {
 
       <div className="row">
        
-        <div className="tag col-4">
+        <div className="tag col-xl-4 col-md-6">
           <img src={userprofile} alt="user1" className="profile-img" />
         </div>
 
-        <div className="tag col-4">
+        <div className="tag col-xl-5 col-md-6">
           <img src={statistic} alt="user2" className="statistic" />
         </div>
 
