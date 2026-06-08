@@ -60,3 +60,17 @@
     
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px; /* ← chota karo */
+  }
+
+  .vector img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+}

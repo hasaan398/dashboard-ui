@@ -107,3 +107,27 @@
     margin-bottom: 20px;
     margin-left: 0;
 }
+
+@media (max-width: 768px) {
+    .header{
+        margin-left: -10px;
+    }
+}
+@media (max-width: 500px) {
+    .header{
+        margin-left: -10px;
+    }
+    .search-box img{
+        width: 20px;
+        
+    }   
+    .language{
+        display: none;
+    }
+    .icon {
+        display: none;
+    }
+    .header-right{
+        margin-left: 10px;
+    }
+}

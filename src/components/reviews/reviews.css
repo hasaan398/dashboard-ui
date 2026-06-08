@@ -1,0 +1,36 @@
+.user-reviews {
+    padding: 20px;
+}
+
+.user-reviews h1 {
+    margin-left: 0;
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.review-card {
+    width: 100%;
+    border: 1px solid rgb(223, 216, 216);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.review-card small {
+    font-size: 16px;
+    color: #F8C140;
+}
+
+.name {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.review-card p {
+    font-size: 8px;
+    margin-top: 8px;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
-import notification from "../assets/notification.png";
-import chat from "../assets/chat.png";
-import user from "../assets/user.png";
+import notification from "../../assets/notification.png";
+import chat from "../../assets/chat.png";
+import user from "../../assets/user.png";
 import "./header.css";
-import search from "../assets/search.png";
-import drop from "../assets/drop.png";
+import search from "../../assets/search.png";
+import drop from "../../assets/drop.png";
 
 function Header() {
   return (

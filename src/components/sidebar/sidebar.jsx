@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 import "./sidebar.css";
 
-import logo from "../assets/logo.png";
-import email from "../assets/email.png";
-import contact from "../assets/contact.png";
-import crypto from "../assets/crypto.png";
-import kanban from "../assets/kanban.png";
-import invoicing from "../assets/invoicing.png";
-import dolar from "../assets/dolar.png";
-import pye from "../assets/pye.png";
-import home from "../assets/home.png";
+import logo from "../../assets/logo.png";
+import email from "../../assets/email.png";
+import contact from "../../assets/contact.png";
+import crypto from "../../assets/crypto.png";
+import kanban from "../../assets/kanban.png";
+import invoicing from "../../assets/invoicing.png";
+import dolar from "../../assets/dolar.png";
+import pye from "../../assets/pye.png";
+import home from "../../assets/home.png";
 
 function Sidebar() {
   return (
