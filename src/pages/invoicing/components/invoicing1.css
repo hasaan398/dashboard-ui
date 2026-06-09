@@ -1,0 +1,315 @@
+/* ===== INVOICING PAGE ===== */
+.invoicing-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.invoicing-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.invoicing-left h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.invoicing-right {
+  width: 300px;
+  flex-shrink: 0;
+  background-color: #F5EFFC;
+  border-radius: 12px;
+  padding: 16px;
+  gap: 16px;
+}
+
+.invoice-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 120px;
+  background: white;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.stat-card h3 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 4px;
+  color: #4F45B6;
+}
+
+.stat-card h3.yellow { color: #F8C140; }
+.stat-card h3.green  { color: #4CAF50; }
+
+.stat-card span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.stat-card p {
+  font-size: 11px;
+  color: #4CAF50;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.invoice-table-section h6 {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.invoice-table thead tr {
+  background: #f0eeff;
+}
+
+.invoice-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 12px;
+  color: #777;
+  font-weight: 600;
+}
+
+.invoice-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #ececec;
+  color: #444;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status-badge.paid {
+  background: #e8f5e9;
+  color: #4CAF50;
+}
+
+.status-badge.unpaid {
+  background: #fdecea;
+  color: #e53935;
+}
+
+.table-actions {
+  color: #aaa;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ===== PAGINATION ===== */
+.invoice-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 12px;
+  color: #777;
+}
+
+.pages {
+  display: flex;
+  gap: 4px;
+}
+
+.pages button {
+  border: 1px solid #ececec;
+  background: white;
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.pages button.active-page {
+  background: #4F45B6;
+  color: white;
+  border-color: #4F45B6;
+}
+
+.my-card {
+  background: linear-gradient(135deg, #4F45B6, #7B6FD4);
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+    background: linear-gradient(135deg, #4F45B6 0%, #E07B54 50%, #F8C140 100%);
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.my-card p {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-bottom small {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.card-bottom h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.toggle-btn .toggle {
+  width: 40px;
+  height: 22px;
+  border-radius: 100%;
+  background: #FFFFFF;
+}
+
+
+
+
+.send-invoice {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.send-invoice h6 {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  border: 1px solid #ececec;
+  background: white;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tab.active-tab {
+  background: #4F45B6;
+  color: white;
+  border-color: #4F45B6;
+}
+
+.send-invoice label {
+  font-size: 11px;
+  color: #aaa;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+
+.invoice-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+}
+
+.invoice-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  padding: 8px 12px;
+  gap: 8px;
+}
+
+.invoice-input span {
+  color: #aaa;
+}
+
+.invoice-input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+}
+
+.invoice-ref {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+}
+
+.confirm-btn {
+  width: 100%;
+  background: #4F45B6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+ 
+@media (max-width: 992px) {
+  .invoicing-page {
+    flex-direction: column;
+  }
+
+  .invoicing-right {
+    display: none;
+  }
+
+  .invoice-stats {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-card {
+    min-width: calc(50% - 8px);
+  }
+
+  .invoice-table {
+    font-size: 11px;
+  }
+}

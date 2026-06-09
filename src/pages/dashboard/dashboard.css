@@ -1,0 +1,63 @@
+
+/* ===== DASHBOARD ===== */
+.dashboard-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.dashboard-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-right {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.dashboard-title {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.btn{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-area {
+  flex: 1;
+  margin-left: 120px;
+  padding-top: 100px;
+  overflow-y: auto;
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .main-area {
+    margin-left: 60px;
+  }
+
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .dashboard-right {
+    width: 100%;
+  }
+
+  .dashboard-left {
+    width: 100%;
+  }
+}
+

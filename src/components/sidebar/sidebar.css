@@ -53,16 +53,16 @@
 }
 
 
-.vector a:hover {
-    transform: scale(1.1);
-    opacity: 0.9;               
-      /* temporary */
-    
-}
 
+.active-link {
+  border-right: 4px solid #4F45B6;
+  width: 100%;
+  color: #4F45B6;
+   filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(1234%) hue-rotate(228deg) brightness(89%) contrast(96%);
+}
 @media (max-width: 768px) {
   .sidebar {
-    width: 70px; /* ← chota karo */
+    width: 70px; 
   }
 
   .vector img {
