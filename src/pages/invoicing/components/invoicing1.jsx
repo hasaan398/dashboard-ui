@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./invoicing1.css";
+import { invoices as invoiceData } from "../../../components/data";
 
 export default function Invoicing1() {
-  const [invoices, setInvoices] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/invoices")
-      .then(res => res.json())
-      .then(data => setInvoices(data));
-  }, []);
+  const [invoices] = useState(invoiceData);
 
   return (
     <>
@@ -16,7 +11,17 @@ export default function Invoicing1() {
 
         {/* LEFT */}
         <div className="invoicing-left">
-          <h1>Invoicing</h1>
+
+          <div className="d-flex justify-content-between align-items-center">
+            <h1>Invoicing</h1>
+            <button
+              className="btn btn-light d-lg-none"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#invoicePanel"
+            >
+              ☰
+            </button>
+          </div>
 
           {/* Stats Cards */}
           <div className="invoice-stats">
@@ -90,10 +95,9 @@ export default function Invoicing1() {
           </div>
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT - desktop */}
         <div className="invoicing-right d-none d-lg-flex flex-column">
 
-          {/* My Card */}
           <div className="my-card">
             <div className="card-top">
               <span>Visa</span>
@@ -111,38 +115,27 @@ export default function Invoicing1() {
             </div>
           </div>
 
-          {/* Send Invoices */}
           <div className="send-invoice">
             <h6>Send Invoices</h6>
-
             <div className="tabs">
               <button className="tab active-tab">Important</button>
               <button className="tab">Socials</button>
             </div>
-
             <label>Region</label>
             <select className="invoice-select">
               <option>Select from list</option>
             </select>
-
             <label>Amount</label>
             <div className="invoice-input">
               <span>$</span>
               <input type="text" placeholder="Insert amount" />
             </div>
-
             <label>Reference</label>
-            <input
-              type="text"
-              placeholder="Enter reference here"
-              className="invoice-ref"
-            />
-
+            <input type="text" placeholder="Enter reference here" className="invoice-ref" />
             <button className="confirm-btn">Confirm</button>
           </div>
 
         </div>
-
       </div>
 
       {/* OFFCANVAS - mobile */}

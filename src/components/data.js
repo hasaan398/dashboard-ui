@@ -1,0 +1,61 @@
+export const emails = [
+  { 
+    id: 1, 
+    sender: "Tony Soap",
+    subject: "Daily Meeting Schedule with Stakeholders",
+    preview: "Lorem ipsum dolor sit amet consectetur adipiscing elit...",
+    time: "Today",
+    category: "inbox",
+    important: true
+  },
+  { 
+    id: 2, 
+    sender: "Samantha",
+    subject: "Weekly Server Maintenance",
+    preview: "Lorem ipsum dolor sit amet consectetur adipiscing elit...",
+    time: "Today",
+    category: "inbox",
+    important: false
+  },
+  { 
+    id: 3, 
+    sender: "Design Team",
+    subject: "Design Newsletter",
+    preview: "Lorem ipsum dolor sit amet consectetur adipiscing elit...",
+    time: "Today",
+    category: "inbox",
+    important: false
+  },
+  { 
+    id: 4, 
+    sender: "Bot",
+    subject: "Your Daily Booster",
+    preview: "Lorem ipsum dolor sit amet consectetur adipiscing elit...",
+    time: "Today",
+    category: "inbox",
+    important: false
+  }
+];
+
+export const contacts = [
+  { id: 1, name: "Johnny Ahmad", role: "Central Usability Officer", online: true },
+  { id: 2, name: "Samantha William", role: "Central Usability Officer", online: true },
+  { id: 3, name: "Nadia Adja", role: "Central Usability Officer", online: false },
+  { id: 4, name: "Tony Soap", role: "Central Usability Officer", online: true },
+  { id: 5, name: "Karen Hope", role: "Central Usability Officer", online: false },
+  { id: 6, name: "Jack Gallen", role: "Central Usability Officer", online: true },
+  { id: 7, name: "Jordan Nico", role: "Central Usability Officer", online: false },
+  { id: 8, name: "John Doe", role: "Central Usability Officer", online: true },
+  { id: 9, name: "Vega D.", role: "Central Usability Officer", online: false },
+  { id: 10, name: "Col J. Lays", role: "Central Usability Officer", online: true },
+  { id: 11, name: "Vergo Vergana", role: "Central Usability Officer", online: false },
+  { id: 12, name: "Angelina Crispy", role: "Central Usability Officer", online: true }
+];
+
+export const invoices = [
+  { id: "#123456", date: "21/03/2021", amount: "$145.00", dueDate: "21/04/2021", status: "Paid" },
+  { id: "#123458", date: "21/03/2021", amount: "$45.00", dueDate: "21/04/2021", status: "Unpaid" },
+  { id: "#123459", date: "21/03/2021", amount: "$75.00", dueDate: "21/04/2021", status: "Paid" },
+  { id: "#123460", date: "21/03/2021", amount: "$345.00", dueDate: "21/04/2021", status: "Unpaid" },
+  { id: "#123461", date: "21/03/2021", amount: "$454.00", dueDate: "21/04/2021", status: "Paid" }
+];

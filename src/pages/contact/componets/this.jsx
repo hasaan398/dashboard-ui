@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { contacts } from "../../../components/data";
+import "./this.css";
 
-export default function ContactCard({ contact }) {
+function ContactCard({ contact }) {
   return (
     <div className="contact-card">
       <div className="contact-card-top">
@@ -20,6 +22,21 @@ export default function ContactCard({ contact }) {
         <button>✉</button>
         <button>📞</button>
         <button>💬</button>
+      </div>
+    </div>
+  );
+}
+
+export default function Contact() {
+  const [contactList] = useState(contacts);
+
+  return (
+    <div className="contact-page">
+      <h1>Contact</h1>
+      <div className="contact-grid">
+        {contactList.map(contact => (
+          <ContactCard key={contact.id} contact={contact} />
+        ))}
       </div>
     </div>
   );

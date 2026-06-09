@@ -1,21 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./this.css";
-
+import { emails as emailData } from "../../../components/data";
 export default function Email() {
-  const [emails, setEmails] = useState([]);
+  const [emails] = useState(emailData);
   const [selected, setSelected] = useState(null);
   const [showPreview, setShowPreview] = useState(false);
   const [activeMenu, setActiveMenu] = useState("Inbox");
-
-  useEffect(() => {
-    fetch("http://localhost:3001/emails")
-      .then((res) => res.json())
-      .then((data) => {
-        setEmails(data);
-        setSelected(null);
-        setShowPreview(false);
-      });
-  }, []);
 
   return (
     <>
@@ -187,7 +177,6 @@ export default function Email() {
           ) : (
             <div className="empty-preview">
               <h5>Select an email</h5>
-         
             </div>
           )}
         </div>
