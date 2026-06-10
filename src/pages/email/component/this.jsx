@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./this.css";
 import { emails as emailData } from "../../../components/data";
+
 export default function Email() {
   const [emails] = useState(emailData);
   const [selected, setSelected] = useState(null);
@@ -12,27 +13,19 @@ export default function Email() {
       <h1>Email</h1>
 
       <div className="email-layout">
+
         {/* LEFT MENU */}
         <div className="email-menu">
           <button className="new-mail-btn">+ New Mail</button>
 
           <ul>
-            {[
-              "Inbox",
-              "Sent",
-              "Favorite",
-              "Draft",
-              "Important",
-              "Scheduled",
-            ].map((item) => (
+            {["Inbox", "Sent", "Favorite", "Draft", "Important", "Scheduled"].map((item) => (
               <li
                 key={item}
                 className={activeMenu === item ? "active-menu" : ""}
                 onClick={() => setActiveMenu(item)}
               >
-                {item === "Inbox" && (
-                  <span className="inbox-badge">2</span>
-                )}
+                {item === "Inbox" && <span className="inbox-badge">2</span>}
                 {item}
               </li>
             ))}
@@ -40,17 +33,12 @@ export default function Email() {
 
           <div className="categories">
             <p>Categories</p>
-
             <div className="category-item">
-              <span className="dot yellow"></span>
-              Work
+              <span className="dot yellow"></span> Work
             </div>
-
             <div className="category-item">
-              <span className="dot red"></span>
-              Side Projects
+              <span className="dot red"></span> Side Projects
             </div>
-
             <div className="category-item add-category">
               + Add Categories
             </div>
@@ -64,42 +52,32 @@ export default function Email() {
               <input type="checkbox" />
               <span>Today</span>
             </div>
-
             <span>•••</span>
           </div>
 
           {emails.map((email) => (
             <div
               key={email.id}
-              className={`email-item ${
-                selected?.id === email.id ? "active" : ""
-              }`}
+              className={`email-item ${selected?.id === email.id ? "active" : ""}`}
               onClick={() => {
                 setSelected(email);
                 setShowPreview(true);
               }}
             >
-              <input
-                type="checkbox"
-                onClick={(e) => e.stopPropagation()}
-              />
-
+              <input type="checkbox" onClick={(e) => e.stopPropagation()} />
               <div className="email-avatar">
                 {email.sender.charAt(0)}
               </div>
-
               <div className="email-info">
                 <h6>{email.subject}</h6>
                 <p>{email.preview}</p>
               </div>
-
               <span className="email-star">☆</span>
             </div>
           ))}
 
           <div className="email-pagination">
             Showing 1-5 from 100
-
             <div className="pages">
               <button>‹</button>
               <button className="active-page">1</button>
@@ -110,19 +88,15 @@ export default function Email() {
           </div>
         </div>
 
-        {/* RIGHT PREVIEW */}
-        <div className="email-preview">
-          {showPreview && selected ? (
+        {/* RIGHT PREVIEW - default hidden, click pe show */}
+        <div className={`email-preview ${showPreview ? "show" : ""}`}>
+          {selected && (
             <>
               <div className="preview-header">
-                <span className="important-badge">
-                  Important
-                </span>
-
+                <span className="important-badge">Important</span>
                 <div className="preview-icons">
                   <span>☆</span>
                   <span>®</span>
-
                   <span
                     style={{ cursor: "pointer" }}
                     onClick={() => {
@@ -141,45 +115,29 @@ export default function Email() {
                 <div className="sender-avatar">
                   {selected.sender.charAt(0)}
                 </div>
-
                 <span>{selected.sender}</span>
               </div>
 
               <p className="preview-body">
-                Hi Bella,
-                <br />
-                <br />
-                {selected.preview}
-                <br />
-                <br />
-                Regards,
-                <br />
+                Hi Bella,<br /><br />
+                {selected.preview}<br /><br />
+                Regards,<br />
                 Samantha
               </p>
 
               <div className="reply-box">
-                <input
-                  type="text"
-                  placeholder="Write your message here..."
-                />
-
+                <input type="text" placeholder="Write your message here..." />
                 <div className="reply-toolbar">
                   <span>B</span>
                   <span>I</span>
                   <span>U</span>
                 </div>
-
-                <button className="send-btn">
-                  ➤ Send
-                </button>
+                <button className="send-btn">➤ Send</button>
               </div>
             </>
-          ) : (
-            <div className="empty-preview">
-              <h5>Select an email</h5>
-            </div>
           )}
         </div>
+
       </div>
     </>
   );

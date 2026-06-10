@@ -211,18 +211,23 @@
 }
 
 /* ===== PREVIEW ===== */
+/* DEFAULT HIDDEN */
 .email-preview {
   width: 320px;
   flex-shrink: 0;
   border: 1px solid #ececec;
   border-radius: 12px;
   padding: 20px;
-  display: flex;
+  display: none;      
   flex-direction: column;
   gap: 12px;
   overflow-y: auto;
 }
 
+/* CLICK PE SHOW */
+.email-preview.show {
+  display: flex;       
+}
 .preview-header {
   display: flex;
   justify-content: space-between;

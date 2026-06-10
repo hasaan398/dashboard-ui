@@ -1,72 +1,103 @@
-import React from "react";
+import React, { useState } from "react";
+import { transactions, savings } from "../../../components/data";
+import cardImg from "../../../assets/card.png";
+import profitsImg from "../../../assets/profits.png";
 import "./banking.css";
 
-export default function CardSection() {
+export default function Finance() {
+  const [transactionList] = useState(transactions);
+  const [savingsList] = useState(savings);
+
   return (
-    <div className="container-fluid mt-4">
-      <div className="row ">
+    <div className="finance-page">
+      <h1>Banking</h1>
 
-        {/* LEFT CARD */}
-        <div className="col-lg-7">
-          <h3 className="section-title">My Card</h3>
+      {/* TOP SECTION */}
+      <div className="finance-top">
 
-          <div className="bank-card">
-            <div className="card-circles">
-              <div className="circle"></div>
-              <div className="circle"></div>
+        {/* My Card */}
+    <div className="finance-card-section">
+  <img src={cardImg} alt="card" style={{width:"100%", borderRadius:"16px"}} />
+</div>
+        {/* Quick Transfer */}
+        <div className="quick-transfer">
+          <h6>Quick Transfer</h6>
+          <div className="transfer-box">
+            <div className="transfer-avatars">
+              <div className="t-avatar">T<p>Tony</p></div>
+              <div className="t-avatar">K<p>Karen</p></div>
+              <div className="t-avatar">J<p>Jordan</p></div>
+              <div className="t-avatar add">+</div>
             </div>
-
-            <div className="card-number">
-              4444 55454 5454 1234
+            <div className="transfer-amount">
+              <label>Amount</label>
+              <input type="text" defaultValue="$100" />
             </div>
-
-            <div className="card-balance">
-              <p>Balance</p>
-              <h1>$4811,21</h1>
-            </div>
-
-            <div className="yellow-shape"></div>
-            <div className="orange-shape"></div>
+            <button className="transfer-btn">Transfer ➤</button>
           </div>
         </div>
 
-        {/* RIGHT TRANSFER */}
-        <div className="col-lg-5">
-          <h3 className="section-title">Quick Transfer</h3>
+        {/* Profits */}
+        <div className="profits-section">
+          <img src={profitsImg} alt="profits" style={{width:"100%", borderRadius:"12px"}} />
+        </div>
 
-          <div className="transfer-box">
+      </div>
 
-            <div className="users">
-              <div className="user">
-                <div className="avatar"></div>
-                <span>Tony</span>
-              </div>
+      {/* BOTTOM SECTION */}
+      <div className="finance-bottom">
 
-              <div className="user">
-                <div className="avatar"></div>
-                <span>Karen</span>
-              </div>
-
-              <div className="user">
-                <div className="avatar"></div>
-                <span>Jordan</span>
-              </div>
-
-              <div className="user">
-                <div className="avatar add-user">+</div>
-              </div>
-            </div>
-
-            <div className="amount-box">
-              <label>Amount</label>
-              <input type="text" value="$100" readOnly />
-            </div>
-
-            <button className="transfer-btn">
-              Transfer ➤
-            </button>
-
+        {/* Latest Transactions */}
+        <div className="transactions-section">
+          <div className="d-flex justify-content-between align-items-center mb-3">
+            <h6>Latest Transaction</h6>
+            <span className="view-all">View all</span>
           </div>
+
+          {transactionList.map(t => (
+            <div key={t.id} className="transaction-item">
+              <input type="checkbox" defaultChecked={t.checked} />
+              <div className="transaction-info">
+                <p>{t.name}</p>
+                <small>{t.category}</small>
+              </div>
+              <span className="transaction-date">{t.date}</span>
+              <span className="transaction-amount">{t.amount}</span>
+              <span className="transaction-dots">•••</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Savings */}
+        <div className="savings-section">
+          <h6>Savings</h6>
+
+          {savingsList.map(s => (
+            <div key={s.id} className="saving-item">
+              <div className="saving-header">
+                <div className="d-flex align-items-center gap-2">
+                  <span
+                    className="saving-dot"
+                    style={{background: s.color}}
+                  ></span>
+                  <span>{s.name}</span>
+                </div>
+                <span>•••</span>
+              </div>
+              <div className="saving-bar">
+                <div
+                  className="saving-progress"
+                  style={{
+                    width: `${(s.current / s.total) * 100}%`,
+                    background: s.color
+                  }}
+                ></div>
+              </div>
+              <div className="saving-amounts">
+                <span>{s.current.toLocaleString()} / ${s.total.toLocaleString()}</span>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>

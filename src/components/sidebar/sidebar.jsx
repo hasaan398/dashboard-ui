@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./sidebar.css";
-
 import logo from "../../assets/logo.png";
 import email from "../../assets/email.png";
 import contact from "../../assets/contact.png";
@@ -52,11 +51,11 @@ function Sidebar() {
             <img src={dolar} alt="dollar" />
           </Link>
 
-          <div className="vector-2">
+          
             <Link to="/analytics" className={location.pathname === "/analytics" ? "active-link" : ""}>
               <img src={pye} alt="pie" />
             </Link>
-          </div>
+       
 
         </div>
       </div>

@@ -59,7 +59,7 @@
 
 .main-card img {
     width: 100%;
-    margin-top: 20px;
+  
 }
 
 .card-top {
@@ -223,3 +223,44 @@
         width: 10px;
     }
 }
+
+  @media (min-width: 1701px) {
+    .main-card img{
+        width: 300px;
+    }
+  
+
+  }
+
+  @media (min-width: 1628px) {
+    .main-card img{
+        width: 300px;
+    }
+  
+
+  }
+
+  @media (min-width: 1493px) {
+    .main-card img{
+        width: 300px;
+    }
+  
+
+  }
+  
+  @media (max-width: 759px) {
+    .main-card img{
+        width: 300px;
+    }
+  
+
+  }
+
+    @media (max-width: 412px) {
+    .main-card img{
+        width: 100%;
+        margin-right: 100px;
+    }
+  
+
+  }

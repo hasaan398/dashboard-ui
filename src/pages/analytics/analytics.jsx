@@ -1,3 +1,6 @@
+import React from "react";
+import Ticketing from "./components/ticketing";
+
 export default function Analytics() {
-  return <h1>Analytics</h1>;
+  return <Ticketing />;
 }

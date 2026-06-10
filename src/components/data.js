@@ -1,3 +1,5 @@
+import Finance from "../pages/finance/finance";
+
 export const emails = [
   { 
     id: 1, 
@@ -58,4 +60,32 @@ export const invoices = [
   { id: "#123459", date: "21/03/2021", amount: "$75.00", dueDate: "21/04/2021", status: "Paid" },
   { id: "#123460", date: "21/03/2021", amount: "$345.00", dueDate: "21/04/2021", status: "Unpaid" },
   { id: "#123461", date: "21/03/2021", amount: "$454.00", dueDate: "21/04/2021", status: "Paid" }
+];
+// =================Finance page======================
+export const transactions = [
+  { id: 1, name: "To Heaven Studio", category: "Salary", date: "12 June, 2021", amount: "-$650,00", checked: true },
+  { id: 2, name: "Monthly Subcription", category: "Payment", date: "12 June, 2021", amount: "-$650,00", checked: true },
+  { id: 3, name: "Groceries", category: "Payment", date: "12 June, 2021", amount: "-$650,00", checked: true },
+  { id: 4, name: "Icon Studio", category: "Salary", date: "12 June, 2021", amount: "-$650,00", checked: true }
+];
+
+export const savings = [
+  { id: 1, name: "Buying House", current: 16500, total: 10000, color: "#4F45B6" },
+  { id: 2, name: "Gaming Setup", current: 7000, total: 10000, color: "#F8C140" }
+];
+
+export const tickets = [
+  { id: 1, event: "Music Event", date: "12 June, 2021", email: "samantha@email.com", status: "Pending", file: "ticket001.pdf", amount: "-$60,00" },
+  { id: 2, event: "Anime Music Event", date: "12 June, 2021", email: "soap@email.com", status: "Completed", file: "ticket002.pdf", amount: "-$750,00" },
+  { id: 3, event: "Home Decor Event", date: "12 June, 2021", email: "azhmad@email.com", status: "Pending", file: "ticket003.pdf", amount: "-$150,00" },
+  { id: 4, event: "Food Festival", date: "12 June, 2021", email: "hope@email.com", status: "Completed", file: "ticket004.pdf", amount: "-$50,00" },
+  { id: 5, event: "Tech Seminar", date: "12 June, 2021", email: "cole@email.com", status: "Completed", file: "ticket005.pdf", amount: "-$10,00" },
+  { id: 6, event: "Food Festival", date: "12 June, 2021", email: "john@email.com", status: "Pending", file: "ticket006.pdf", amount: "-$650,00" }
+];
+
+export const todayEvents = [
+  { id: 1, time: "09:00 - 10:00 AM", title: "Web Design Webinar", desc: "Sed dignissaf lorem reprehenderit. Lorem ipsum dolor interdum.", color: "#4F45B6" },
+  { id: 2, time: "09:00 - 10:00 AM", title: "Food Festival", desc: "Sed dignissaf lorem reprehenderit. Lorem ipsum dolor interdum.", color: "#F8C140" },
+  { id: 3, time: "09:00 - 10:00 AM", title: "Tech Seminar", desc: "Sed dignissaf lorem reprehenderit. Lorem ipsum dolor interdum.", color: "#FF6B6B" },
+  { id: 4, time: "09:00 - 10:00 AM", title: "Music Event", desc: "Sed dignissaf lorem reprehenderit. Lorem ipsum dolor interdum.", color: "#4F45B6" }
 ];

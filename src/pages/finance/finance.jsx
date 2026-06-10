@@ -1,12 +1,5 @@
-import CardSection from "./components/banking";
+import Finance from "./components/banking";
 
-function Finance() {
-  return (
-    <>
-    <h1>Banking</h1>
-      <CardSection />
-    </>
-  );
+export default function FinancePage() {
+  return <Finance />;
 }
-
-export default Finance;

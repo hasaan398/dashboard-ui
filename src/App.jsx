@@ -9,7 +9,7 @@ import Crypto from "./pages/crypto/crypto.jsx";
 import Kanban from "./pages/kanban/kanban.jsx";
 import Invoicing from "./pages/invoicing/invoicing.jsx";
 import Finance from "./pages/finance/finance.jsx";
-import Analytics from "./pages/analytics/analytics.jsx";
+import Analytics from "./pages/analytics/analytics";
 function App() {
   return (
     <BrowserRouter>
