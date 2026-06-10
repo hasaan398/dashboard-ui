@@ -25,8 +25,9 @@ export default function Email() {
                 className={activeMenu === item ? "active-menu" : ""}
                 onClick={() => setActiveMenu(item)}
               >
+                  {item}
                 {item === "Inbox" && <span className="inbox-badge">2</span>}
-                {item}
+              
               </li>
             ))}
           </ul>
